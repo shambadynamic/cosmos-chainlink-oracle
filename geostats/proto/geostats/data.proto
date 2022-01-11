@@ -1,0 +1,16 @@
+syntax = "proto3";
+package shamba.geostats.geostats;
+
+option go_package = "github.com/shamba/geostats/x/geostats/types";
+
+message Data {
+  uint64 id = 1;
+  string requester = 2; 
+  string aggX = 3; 
+  string datasetCode = 4; 
+  string selectedBand = 5; 
+  string imageScale = 6; 
+  string startDate = 7; 
+  string endDate = 8; 
+  string creator = 9;
+}

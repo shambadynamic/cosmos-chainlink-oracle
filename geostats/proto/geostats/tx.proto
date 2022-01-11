@@ -1,0 +1,53 @@
+syntax = "proto3";
+package shamba.geostats.geostats;
+
+import "geostats/data.proto";
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/shamba/geostats/x/geostats/types";
+
+// Msg defines the Msg service.
+service Msg {
+    rpc CreateData(MsgCreateData) returns (MsgCreateDataResponse);
+  rpc UpdateData(MsgUpdateData) returns (MsgUpdateDataResponse);
+  rpc DeleteData(MsgDeleteData) returns (MsgDeleteDataResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgCreateData {
+  string creator = 1;
+  string requester = 2;
+  string aggX = 3;
+  string datasetCode = 4;
+  string selectedBand = 5;
+  string imageScale = 6;
+  string startDate = 7;
+  string endDate = 8;
+}
+
+message MsgCreateDataResponse {
+  uint64 id = 1;
+}
+
+message MsgUpdateData {
+  string creator = 1;
+  uint64 id = 2;
+  string requester = 3;
+  string aggX = 4;
+  string datasetCode = 5;
+  string selectedBand = 6;
+  string imageScale = 7;
+  string startDate = 8;
+  string endDate = 9;
+}
+
+message MsgUpdateDataResponse {}
+
+message MsgDeleteData {
+  string creator = 1;
+  uint64 id = 2;
+}
+
+message MsgDeleteDataResponse {}
+
+// this line is used by starport scaffolding # proto/tx/message

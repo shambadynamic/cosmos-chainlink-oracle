@@ -1,0 +1,12 @@
+type = "webhook"
+schemaVersion = 1
+name = "LINK-EA"
+externalInitiators = [
+  { name = "linktest", spec = "{\"endpoint\": \"random\"}" },
+]
+observationSource = """
+    parse_request  [type="jsonparse" path="" data="$(jobRun.requestBody)"]
+    send_to_bridge [type="bridge" name="link-ea" requestData="{ \\"result\\": $(parse_request) }"]
+
+    parse_request -> send_to_bridge
+"""
