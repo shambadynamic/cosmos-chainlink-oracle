@@ -37,13 +37,13 @@ Join the Shamba Discord server to get more information about the setup above (ht
 
 5. Fill the 'New Data' form on the left hand panel with the following information:
 
-Requester: *the-cosmos-wallet-address-you-imported*
-AggX: agg_mean
-DatasetCode: COPERNICUS/S2_SR
-SelectedBand: NDVI
-ImageScale: 250
-StartDate: 2021-09-01
-EndDate: 2021-09-20
+        Requester: *the-cosmos-wallet-address-you-imported*
+        AggX: agg_mean
+        DatasetCode: COPERNICUS/S2_SR
+        SelectedBand: NDVI
+        ImageScale: 250
+        StartDate: 2021-09-01
+        EndDate: 2021-09-20
 
 6. You can specify the code for any dataset indicated at https://docs.shamba.app  but ensure you give the correct corresponding band and scale.
 
